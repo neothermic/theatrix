@@ -11,6 +11,7 @@ sudo chmod u+s /usr/bin/pythonRoot
 sudo cp ~/theatrix/relaytv/index.html /var/www/html/index.html
 sudo cp ~/theatrix/relaytv/doStuff.py /var/www/doStuff.py
 sudo chmod +x /var/www/doStuff.py #allow execution of the script
+sudo cp ~/theatrix/relaytv/lighttpd.conf /etc/lighttpd/lighttpd.conf
 echo "Install finished, launching web server"
 sudo service lighttpd start
 echo "Complete, server started"
