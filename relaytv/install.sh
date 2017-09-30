@@ -1,7 +1,7 @@
 #!/bin/sh
 echo "Installing RelayTV package - web server (lighttpd) and relevant files"
 sudo apt-get --assume-yes install lighttpd #install webserver
-sudo apt-get --assume-yes install flup #install flup
+sudo apt-get --assume-yes install python-flup #install flup
 
 #Setup admin version of python
 sudo cp /usr/bin/python2.7 /usr/bin/pythonRoot
