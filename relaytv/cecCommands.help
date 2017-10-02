@@ -1,0 +1,8 @@
+echo "tx 10:44:6D" | cec-client RPI -s -d 4     POWER ON
+echo "tx 1F:82:30:00" | cec-client RPI -s -d 4  SWITCH TO INPUT HMDI3
+ls
+echo "tx 10:44:6C" | cec-client RPI -s -d 4     POWER OFF
+
+
+
+
