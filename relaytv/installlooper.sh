@@ -7,5 +7,7 @@ echo "Installing script into crontab"
 
 line="@reboot screen -dmS loop bash -i ~/theatrix/relaytv/loopScript.sh"
 (crontab -u pi -l; echo "$line" ) | crontab -u pi -
+echo "Creating content folder at ~/theatrix/content/"
+mkdir ~/theatrix/content
 
-echo "Install complete, reboot to start playback"
+echo "Install complete, add content and reboot to start playback"
