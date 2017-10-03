@@ -25,4 +25,7 @@ TODO: Set target directory for files to be played from in above script
 Add line to crontab
 @reboot screen -dmS loop bash -i ~/theatrix/relaytv/loopScript.sh
 
+#!/bin/bash
 
+line="@reboot screen -dmS loop bash -i ~/theatrix/relaytv/loopScript.sh"
+(crontab -u pi -l; echo "$line" ) | crontab -u pi -
