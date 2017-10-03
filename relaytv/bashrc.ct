@@ -3,7 +3,7 @@ playall(){
     IFS=$'\t\n' #change ifs seperator from spaces to new line, dont mangle file$
 
     # Create a list of files in current directory to play
-    fileList=$(find . -maxdepth 1 -type f | sort | grep -i '\.avi$\|\.mp4$\|\.m$
+    fileList=$(find . -maxdepth 1 -type f | sort | grep -i '\.avi$\|\.mp4$\|\.mkv$\|\.mpg$\|\.mpeg$\|\.flv$')
     #Play each file in the directory
 while [ 1 ]
 do
