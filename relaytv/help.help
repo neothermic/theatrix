@@ -1,0 +1,23 @@
+using OMXplayer to play video loops:
+
+create playall alias by appending it to ~/.bashrc
+<--- paste after this line--->
+playall(){
+    OLD_IFS=${IFS}; #ifs space seperator
+    IFS=$'\t\n' #change ifs seperator from spaces to new line, dont mangle file$
+
+    # Create a list of files in current directory to play
+    fileList=$(find . -maxdepth 1 -type f | sort | grep -i '\.avi$\|\.mp4$\|\.m$
+    #Play each file in the directory
+while [ 1 ]
+do
+    for fileName in $fileList; do
+        omxplayer  ${fileName} -b
+    done
+done
+    IFS=${OLD_IFS}
+}
+<---paste above this line--->
+Playall command now works from within the target directory
+theatrix/relaytv/loopScript.sh starts player on a loop
+TODO: Set target directory for files to be played from in above script
