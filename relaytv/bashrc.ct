@@ -1,7 +1,3 @@
-using OMXplayer to play video loops:
-
-create playall alias by appending it to ~/.bashrc
-<--- paste after this line--->
 playall(){
     OLD_IFS=${IFS}; #ifs space seperator
     IFS=$'\t\n' #change ifs seperator from spaces to new line, dont mangle file$
@@ -17,12 +13,4 @@ do
 done
     IFS=${OLD_IFS}
 }
-<---paste above this line--->
-Playall command now works from within the target directory
-theatrix/relaytv/loopScript.sh starts player on a loop
-TODO: Set target directory for files to be played from in above script
-
-Add line to crontab
-@reboot screen -dmS loop bash -i ~/theatrix/relaytv/loopScript.sh
-
 
