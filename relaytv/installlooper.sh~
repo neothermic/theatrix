@@ -1,9 +1,5 @@
 #!/bin/sh
-sudo apt-get update
-echo "Installing screen"
-sudo apt-get install screen
-echo "Installing cec tools"
-sudo apt-get install cec-utils
+
 echo "Catting bashrc to add playall command"
 cat ~/theatrix/relaytv/bashrc.ct >> ~/.bashrc  #appends contents of bashrc.ct to bashrc, creating the playall command as an alias
 
