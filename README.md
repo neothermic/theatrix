@@ -5,7 +5,7 @@ Modules:
 	relaytv/install/sh
 		Installs lighttpd web server
 		Installs python-flup for cgi interaction
-		Creates an admin copy of python to to execute scripts (GPIO requires toot)
+		Creates an admin copy of python to to execute scripts (GPIO requires root)
 		Copies lighttpd config file
 		Copies web page and python script into place
 		Starts webserver
