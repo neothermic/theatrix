@@ -20,7 +20,7 @@ cp ~/theatrix/relaytv/loopScript.sh ~/theatrix/content/loopScript.sh
 echo "Adding rsync command to loopscript"
 echo Enter the name of the source folder for this unit:
 read ftp_source
-echo 'sudo rsync -azvh --delete -e ssh pi@theatrix1.local:/home/content/$ftpsource/ ~/theatrix/content' >> ~/theatrix/content/loopScript.sh
+echo 'sudo rsync -azvh --delete --progress -e ssh pi@theatrix1.local:/home/content/$ftpsource/ ~/theatrix/content' >> ~/theatrix/content/loopScript.sh
 echo "Catting rest of loopscript together"
 cat ~/theatrix/relaytv/loopScript.ct >> ~/theatrix/content/loopScript.sh  #Appends remainder of original loopscript, now in to-cat file, to content script
 echo "Install complete, add content and reboot to start playback"
