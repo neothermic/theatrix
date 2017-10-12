@@ -18,7 +18,7 @@ cat ~/.ssh/id_rsa.pub | ssh pi@theatrix1.local 'cat >> .ssh/authorized_keys'
 echo "Adding rsync command to cron @reboot"
 echo Enter the name of the source folder for this unit:
 read ftp_source
-(crontab -u pi -l; echo "@reboot sudo rsync -azvh --delete -e ssh pi@theatrix1.local:~/$ftpsource/ ~/theatrix/content" ) | crontab -u pi -
+(crontab -u pi -l; echo "@reboot sudo rsync -azvh --delete -e ssh pi@theatrix1.local:/home/content/$ftpsource/ ~/theatrix/content" ) | crontab -u pi -
 
 
 
