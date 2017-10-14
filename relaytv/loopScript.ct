@@ -1,0 +1,4 @@
+echo "Sync complete" >/dev/tty1 #echo to display
+echo "tx 10:44:6D" | cec-client RPI -s -d 4
+cd ~/theatrix/content
+playall
