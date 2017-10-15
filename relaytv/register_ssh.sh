@@ -5,5 +5,5 @@ cat ~/theatrix/relaytv/ssh_config.ct >> /etc/ssh/ssh_config  #appends line to st
 echo Creating public/private keypair and registering it with theatrix1, what is my hostname:
 read my_name
 ssh-keygen -t rsa -C "$my_name key for theatrix1"
-cat ~/.ssh/id_rsa.pub | ssh pi@theatrix1.local 'cat >> .ssh/authorized_keys'
+sudo cat ~/.ssh/id_rsa.pub | ssh pi@theatrix1.local 'cat >> .ssh/authorized_keys'
 echo Registration complete - Try ssh pi@theatrix1.local to test passwordless access
