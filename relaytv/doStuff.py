@@ -3,6 +3,7 @@
 import RPi.GPIO as G     
 from flup.server.fcgi import WSGIServer 
 import sys, urlparse
+import os #required to send CEC command later
 
 # set up our GPIO pins
 G.setmode(G.BCM)
@@ -24,12 +25,13 @@ def app(environ, start_response):
   # if there's a url variable named 'q'
   if "q" in i:
     if i["q"][0] == "o": 
-      G.output(17, True)   # Turn it on
+      G.output(17, True)   # Turn it off and switch channel
       G.output(22, True)
       G.output(27, True)
+      os.system('echo "tx 10:44:6D" | cec-client RPI -s -d 4') #cec command to change to HDMI3
 
     elif i["q"][0] == "i":
-      G.output(17, False)  # Turn it off
+      G.output(17, False)  # Turn it on
       G.output(22, False)
       G.output(27, False)
 
