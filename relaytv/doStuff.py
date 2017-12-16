@@ -28,7 +28,7 @@ def app(environ, start_response):
       G.output(17, True)   # Turn it off and switch channel
       G.output(22, True)
       G.output(27, True)
-      os.system('echo "tx 10:44:6D" | cec-client RPI -s -d 4') #cec command to change to HDMI3
+      os.system('echo "tx 1F:82:30:00" | cec-client RPI -s -d 4') #cec command to change to HDMI3
 
     elif i["q"][0] == "i":
       G.output(17, False)  # Turn it on
