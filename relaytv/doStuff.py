@@ -35,5 +35,14 @@ def app(environ, start_response):
       G.output(22, False)
       G.output(27, False)
 
+    elif i["q"][0] == "x": #turn TV off
+      os.system('echo "tx 10:44:6C" | cec-client RPI -s -d 4') #cec command to power off TV
+
+    elif i["q"][0] == "z": #turn TV on
+      os.system('echo "tx 10:44:6D" | cec-client RPI -s -d 4') #cec command to power on TV
+
+#    elif i["q"][0] == "r": #reboot pi
+#      os.system('sudo reboot now') #os command to reboot rpi
+
 #by default, Flup works out how to bind to the web server for us, so just call it with our app() function and let it get on with it
 WSGIServer(app).run()
